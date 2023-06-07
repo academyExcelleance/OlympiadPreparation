@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 bat '''
-                     terraform apply
+                     terraform apply -auto-approve
                     '''
             }
         }
