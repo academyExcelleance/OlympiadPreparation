@@ -6,7 +6,9 @@ pipeline {
 
     stages {
         stage('Check dependency'){
-            terraform --version
+             steps {
+                terraform --version
+             }
         }
         stage('Build') {
             steps {
