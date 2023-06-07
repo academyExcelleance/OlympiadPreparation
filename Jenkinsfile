@@ -7,7 +7,9 @@ pipeline {
     stages {
         stage('Check dependency'){
              steps {
-                terraform --version
+                bat '''
+                     terraform --version
+                    '''
              }
         }
         stage('Build') {
