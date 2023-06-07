@@ -15,6 +15,13 @@ pipeline {
                     '''
              }
         }
+        stage('Initialize'){
+             steps {
+                bat '''
+                     terraform init
+                    '''
+             }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
