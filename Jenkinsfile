@@ -22,6 +22,13 @@ pipeline {
                     '''
              }
         }
+        stage('validate'){
+             steps {
+                bat '''
+                     terraform validate
+                    '''
+             }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
