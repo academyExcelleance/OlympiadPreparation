@@ -5,6 +5,9 @@ pipeline {
     agent any
 
     stages {
+        stage('Check dependency'){
+            terraform --version
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
