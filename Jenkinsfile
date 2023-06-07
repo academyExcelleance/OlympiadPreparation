@@ -25,6 +25,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                bat '''
+                     terraform apply
+                    '''
             }
         }
         stage('Test') {
